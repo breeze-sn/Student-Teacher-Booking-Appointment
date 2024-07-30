@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Appointments</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Manage Appointments</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="teacher.html">Manage Teachers</a>
+            <a href="student.html">Manage Students</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Book Appointment</h2>
+            <form id="book-appointment-form">
+                <input type="text" id="student-id" placeholder="Student ID" required>
+                <input type="text" id="teacher-id" placeholder="Teacher ID" required>
+                <input type="date" id="appointment-date" required>
+                <input type="time" id="appointment-time" required>
+                <button type="submit">Book Appointment</button>
+            </form>
+            <h2>View Appointments</h2>
+            <div id="appointment-list"></div>
+        </section>
+    </main>
+    <script src="js/firebase.js"></script>
+    <script src="js/appointment.js"></script>
+</body>
+</html>

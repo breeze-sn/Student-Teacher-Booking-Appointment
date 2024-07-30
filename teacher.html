@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Teachers</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/firebase.js"></script>
+    <script type="module" src="js/auth.js"></script>
+    <script type="module" src="js/main.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Manage Teachers</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="student.html">Manage Students</a>
+            <a href="appointment.html">Manage Appointments</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Add Teacher</h2>
+            <form id="add-teacher-form">
+                <input type="text" id="teacher-name" placeholder="Name" required>
+                <input type="text" id="teacher-department" placeholder="Department" required>
+                <input type="text" id="teacher-subject" placeholder="Subject" required>
+                <button type="submit">Add Teacher</button>
+            </form>
+            <h2>View Teachers</h2>
+            <div id="teacher-list"></div>
+        </section>
+    </main>
+    <script src="js/firebase.js"></script>
+    <script src="js/teacher.js"></script>
+</body>
+</html>
